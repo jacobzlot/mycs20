@@ -1,111 +1,138 @@
 html, body {
-margin: 0;
-padding: 0;
-font-family: 'Signika', system-ui, sans-serif;
-background: #fcfaf8ff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Signika', system-ui, sans-serif;
+    background: #fcfaf8ff;
+}
+.footer {
+    position: fixed;
+    height: 35px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #006e79;
+    color: #fcfaf8ff;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.footer p{
+    font-size: 12px;
+    padding: 25px;
 }
 .header {
-padding: 10px 0;
-text-align: center;
-background: #fcfaf8ff;
-color: #006e79;
-font-size: 30px;
+    padding: 10px 0;
+    text-align: center;
+    background: #fcfaf8ff;
+    color: #006e79;
+    font-size: 30px;
 }
+
 .header h1 {
-margin: 0;
+    margin: 0;
 }
 .nav-bar {
-padding: 0;
-text-align: center;
-background: #006e79;
-color: #fcfaf8ff;
-font-size: 15px;
-margin: 0;
+    padding: 0;
+    text-align: center;
+    background: #006e79;
+    color: #fcfaf8ff;
+    font-size: 15px;
+    margin: 0;
 }
 .nav-bar h2 {
-margin: 0;
-padding: 5px 0;
-font-weight: 300;
-color: #fcfaf8ff;
+    margin: 0;
+    padding: 5px 0;
+    font-weight: 300;
+    color: #fcfaf8ff;
 }
 .nav-bar a, p {
-display: inline-block;
-text-decoration: none;
-color: #fcfaf8ff;
-font-weight: 300;
-padding: 10px 0;
-font-size: 1.2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #fcfaf8ff;
+    font-weight: 300;
+    padding: 10px 0;
+    font-size: 1.2rem;
 }
 .nav-bar a + a::before{
-content:"|";
-color:rgba(255, 255, 255, 0.9);
-margin:0 1.5rem;
-font-weight:300;
+    content:"|";
+    color:rgba(255, 255, 255, 0.9);
+    margin:0 1.5rem;
+    font-weight:300;
 }
 .nav-bar a:hover {
-color: #ffffff;
-font-weight: 600;
+    color: #ffffff;
+    font-weight: 600;
 }
 .hero-image {
-overflow: hidden;
-position: relative;
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
-rgba(0, 0, 0, 0.5)), url("heroimage.webp");
-height: 75vh;
-background-position: center;
-background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5)), url("heroimage.webp");
+    height: 75vh;
+    background-position: center;
+    background-size: cover;
+}
+.hero-image-about-us {
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5)), url("aboutus.webp");
+    height: 75vh;
+    background-position: center;
+    background-size: cover;
 }
 .hero-text{
-position: absolute;
-text-align: center;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: white;
-white-space: nowrap;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    white-space: nowrap;
 }
 .content{
-padding: 10px 0;
-text-align: left;
-background: #fcfaf8ff;
-color: #006e79;
-font-size: 20px;
+    padding: 10px 0;
+    text-align: left;
+    background: #fcfaf8ff;
+    color: #006e79;
+    font-size: 20px;
+    margin-bottom: 50px;
 }
 .content h1{
-padding: 25px 50px;
-text-align: left;
-font-size: 50px;
-margin: 0;
+    padding: 25px 50px;
+    text-align: left;
+    font-size: 50px;
+    margin: 0;
 }
 .content h2{
-padding: 10px 100px;
-text-align: left;
-font-size: 30px;
-font-weight: 300;
-margin: 0;
+    padding: 10px 100px;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0;
 }
 .content ul {
-margin-top: 0;
-margin-bottom: 0;
-list-style: none;
-list-style-position: outside;
-list-style-image: url('food-restaurant-svgrepo-com.svg');
-list-style-type: circle;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    list-style-position: outside;
+    list-style-image: url('food-restaurant-svgrepo-com.svg');
+    list-style-type: circle;
 }
 .content li{
-margin: 10px;
-margin-left: 10px;
-padding-left: 15px;
-text-align: left;
-font-size: 30px;
-font-weight: 300;
+    margin: 10px;
+    margin-left: 10px;
+    padding-left: 15px;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 300;
 }
 .content a{
-text-decoration: none;
-font-weight: 400;
-color: #006e79;
+    text-decoration: none;
+    font-weight: 400;
+    color: #006e79;
 }
 .content a:hover {
-color: #013f45;
-font-weight: 600;
+    color: #013f45;
+    font-weight: 600;
 }
