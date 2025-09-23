@@ -14,11 +14,12 @@ html, body {
     color: #fcfaf8ff;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
 }
 .footer p{
     font-size: 12px;
-    padding: 25px;
+    padding: 0 16px;
+    margin: 0;
 }
 .header {
     padding: 10px 0;
@@ -50,7 +51,7 @@ html, body {
     font-weight: 300;
     color: #fcfaf8ff;
 }
-.nav-bar a, p {
+.nav-bar a, .nav-bar p {
     display: inline-block;
     text-decoration: none;
     color: #fcfaf8ff;
@@ -73,27 +74,18 @@ html, body {
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.5)), url("heroimage.webp");
-    height: 75vh;
-    background-position: center;
-    background-size: cover;
 }
 .hero-image-about-us {
     overflow: hidden;
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.5)), url("aboutus.webp");
-    height: 75vh;
-    background-position: center;
-    background-size: cover;
 }
 .hero-image-restaurants {
     overflow: hidden;
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.5)), url("restauranthero.webp");
-    height: 75vh;
-    background-position: center;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,9 +97,6 @@ html, body {
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), 
     rgba(0, 0, 0, 0.5)), url("boston-hero.webp");
-    height: 75vh;
-    background-position: center;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,6 +111,7 @@ html, body {
     transform: translate(-50%, -50%);
     color: white;
     white-space: nowrap;
+    font-size: 2.5rem;
 }
 .content{
     padding: 10px 0;
@@ -132,22 +122,22 @@ html, body {
     margin-bottom: 50px;
 }
 .content h1{
-    padding: 25px 50px;
+    padding: 25px 8%;
     text-align: left;
-    font-size: 50px;
+    font-size: 3rem;
     margin: 0;
 }
 .content h2{
-    padding: 10px 100px;
+    padding: 10px 12%;
     text-align: left;
-    font-size: 30px;
+    font-size: 1.75rem;
     font-weight: 300;
     margin: 0;
 }
 .content h3{
-    padding: 10px 100px;
+    padding: 10px 16%;
     text-align: left;
-    font-size: 25px;
+    font-size: 1.75rem;
     font-weight: 300;
     margin: 0;
 }
@@ -184,4 +174,68 @@ html, body {
 .content a:hover {
     color: #013f45;
     font-weight: 600;
+}
+.hero-image, .hero-image-about-us, .hero-image-restaurants, .hero-image-boston {
+    background-position:center; 
+    background-size:cover; 
+    min-height:75vh;
+  }
+@media (max-width: 700px) {
+    .nav-bar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 10;
+        text-align: center;
+        background: #006e79;
+        color: #fcfaf8ff;
+        margin: 0;
+        gap: 1rem;
+        padding: 0.25rem;  
+    }
+    .nav-bar h2 {
+        margin: 0;
+        padding: 5px 0;
+        font-weight: 300;
+        color: #fcfaf8ff;
+    }
+    .nav-bar a, .nav-bar p {
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        color: #fcfaf8ff;
+        font-weight: 300;
+        padding: 10px 0;
+        font-size: 1.75rem;
+    }
+    .nav-bar a + a::before{
+        content:"";
+        color:rgba(255, 255, 255, 0.9);
+        margin:0 0rem;
+        font-weight: 300;
+    }
+    .hero-text{
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        white-space: nowrap;
+        font-size: 0.8rem;
+    }
+    .hero-image, .hero-image-about-us, .hero-image-boston, .hero-image-restaurants {
+        overflow: hidden;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        min-height: 50vh;
+    }
+    .content img{
+        border-radius: 20%;
+        display: block;
+        float: none;
+        margin: 1rem auto;
+        max-width: 70%;
+    }
 }
