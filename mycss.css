@@ -56,7 +56,7 @@ html, body {
     color: #fcfaf8ff;
     font-weight: 300;
     padding: 10px 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 .nav-bar a + a::before{
     content:"|";
