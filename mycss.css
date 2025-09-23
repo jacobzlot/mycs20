@@ -180,6 +180,10 @@ html, body {
     min-height:75vh;
   }
 @media (max-width: 700px) {
+    .footer {
+        position: sticky;
+        margin-top: auto;
+    }
     .nav-bar {
         position: sticky;
         top: 0;
