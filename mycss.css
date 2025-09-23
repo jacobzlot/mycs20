@@ -41,6 +41,8 @@ html, body {
     color: #fcfaf8ff;
     font-size: 15px;
     margin: 0;
+    gap: 2rem;
+    padding: 1rem;
 }
 .nav-bar h2 {
     margin: 0;
