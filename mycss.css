@@ -6,9 +6,8 @@ html, body {
 }
 .footer {
     position: fixed;
+    inset: auto 0 0 0;
     height: 35px;
-    left: 0;
-    bottom: 0;
     width: 100%;
     background-color: #006e79;
     color: #fcfaf8ff;
