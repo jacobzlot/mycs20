@@ -10,7 +10,7 @@ html, body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #00000;
+    background-color: #006e79;
     color: #fcfaf8ff;
     display: flex;
     align-items: center;
@@ -39,10 +39,10 @@ html, body {
     text-align: center;
     background: #006e79;
     color: #fcfaf8ff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
-    gap: 2rem;
-    padding: 1rem;
+    gap: 1rem;
+    padding: 0.75rem;
 }
 .nav-bar h2 {
     margin: 0;
@@ -56,7 +56,7 @@ html, body {
     color: #fcfaf8ff;
     font-weight: 300;
     padding: 10px 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .nav-bar a + a::before{
     content:"|";
