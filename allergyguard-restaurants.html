@@ -6,8 +6,52 @@
         <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600&display=swap" rel="stylesheet">
         <title>Allergy Guard Restaurant Page</title>
         <link rel="stylesheet" href="mycss.css">
+        <style>
+            .content form {
+                max-width: 600px;
+                margin: 2rem auto;
+                padding: 1.5rem;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            .content label {
+                display: inline-block;
+                text-align: left;
+                margin: 0;
+                font-family: Signika;
+                font-weight: 700;
+                font-size: 18px;
+                color: #006e79;
+            }
+            .content button {
+                display: block;
+                background-color: #006e79;
+                border: none;
+                color: white;
+                padding: 10px 40px;
+                font-family: Signika;
+                font-size: 18px;
+                margin: 10px auto 0;
+                cursor: pointer;
+                border-radius: 8px;
+            }
+            .content select {
+                font-family: Signika, sans-serif;
+                font-size: 18px;
+                padding: 5px 12px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background-color: #fff;
+                color: #000;
+            }
+            .row {
+                margin-bottom: 1rem;
+            }
+        </style>
     </head>
-    
+
     <body>
         <div class = "header">
             <img src="allergy.webp" alt="Allergy Guard Logo" style="max-width: 100px; height: auto; vertical-align: middle;">
@@ -18,6 +62,33 @@
             <a href = "allergyguard-restaurants.html" style="text-decoration: none;">Restaurants</a>
             <a href = "allergyguard-about.html" style="text-decoration: none;">About</a>
             <a href = "allergyguard-contacts.html" style="text-decoration: none;">Contact</a>
+        </div>
+        <div class="hero-image-restaurants">
+            <div class = "content" style="background: none;">
+                <form class="content form-card" action="boston.html">
+                    <div class="row">
+                      <label for="Cities">Select your city:</label>
+                      <select id="Cities" name="city">
+                        <option>Boston</option>
+                      </select>
+                    </div>
+                    <fieldset class="row">
+                      <legend>Select your allergens:</legend>
+                      <div class="checkbox-grid">
+                        <label><input type="checkbox" name="allergens[]" value="Milk"> Milk</label>
+                        <label><input type="checkbox" name="allergens[]" value="Eggs"> Eggs</label>
+                        <label><input type="checkbox" name="allergens[]" value="Fish"> Fish</label>
+                        <label><input type="checkbox" name="allergens[]" value="Shellfish"> Shellfish</label>
+                        <label><input type="checkbox" name="allergens[]" value="Tree Nuts"> Tree Nuts</label>
+                        <label><input type="checkbox" name="allergens[]" value="Peanuts"> Peanuts</label>
+                        <label><input type="checkbox" name="allergens[]" value="Wheat"> Wheat</label>
+                        <label><input type="checkbox" name="allergens[]" value="Soybeans"> Soybeans</label>
+                        <label><input type="checkbox" name="allergens[]" value="Sesame"> Sesame</label>
+                      </div>
+                    </fieldset>
+                    <button type="submit" class="btn">Submit</button>
+                  </form>
+            </div>
         </div>
         <div class="footer">
             <p>&copy; 2025 Allergy Guard, LLC &lpar;Copyright symbol used for academic purposes only&rpar;</p>
