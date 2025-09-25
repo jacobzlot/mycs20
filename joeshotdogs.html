@@ -24,17 +24,8 @@
 
                 priceDogs = 4.99*numDogs;
                 priceFries = 3.99*numFries;
-                priceSoda = 1.790*numSoda;
-                let total = priceDogs + priceFries + priceSoda;
-
-                let discount = 0;
-                if (total >= 30.00) {
-                    discount = (0.10*total);
-                    total = total - discount;
-                }
-
-                let tax = total*0.0625;
-                total = total + tax;
+                priceSoda = 1.79*numSoda;
+                let subtotal1 = priceDogs + priceFries + priceSoda;
 
                 document.getElementById("numDogs").innerHTML = numDogs + " hotdogs";
                 document.getElementById("numFries").innerHTML = numFries  + " fries";
@@ -42,14 +33,27 @@
                 document.getElementById("dogs").innerHTML = "$" + priceDogs.toFixed(2);
                 document.getElementById("fries").innerHTML = "$" + priceFries.toFixed(2);
                 document.getElementById("sodas").innerHTML = "$" + priceSoda.toFixed(2);
+                document.getElementById("subtotal1").innerHTML = "$" + subtotal1.toFixed(2);
+
+                let discount = 0;
+                let subtotal2 = subtotal1;
+                if (subtotal2 >= 30.00) {
+                    discount = (0.10*subtotal2);
+                    subtotal2 = subtotal2 - discount;
+                }
                 document.getElementById("discount").innerHTML = "-$" + discount.toFixed(2);
+                document.getElementById("subtotal2").innerHTML = "$" + subtotal2.toFixed(2);
+
+                let tax = subtotal2*0.0625;
+                let total = subtotal2 + tax;
+
                 document.getElementById("tax").innerHTML = "$" + tax.toFixed(2);
                 document.getElementById("total").innerHTML = "$" + total.toFixed(2);
 
                 window.scroll(0, 800);
             }
         </script>
-        <link rel="stylesheet" href="joescss.css?v=3">
+        <link rel="stylesheet" href="joescss.css?v=2">
     </head>
     <body>
         <div class = "header">
@@ -68,18 +72,20 @@
 
         <div class="content">
             <div class="receipt">
-            <div class="total" style="justify-content: center; font-size: 1.5rem;"><h1>Receipt</h1></div>
+            <div class="total" style="justify-content: center;"><h1>Receipt</h1></div>
 
             <div class="line"><h1 id="numDogs">0 hotdogs</h1><h1 id="dogs">$0.00</h1></div>
             <div class="line"><h1 id="numFries">0 fries</h1><h1 id="fries">$0.00</h1></div>
             <div class="line"><h1 id="numSoda">0 sodas</h1><h1 id="sodas">$0.00</h1></div>
             <br>
+            <div class="line"><h1>Subtotal</h1><h1 id="subtotal1">$0.00</h1></div>
             <div class="line"><h1>Discount</h1><h1 id="discount">-$0.00</h1></div>
+            <div class="line"><h1>Subtotal</h1><h1 id="subtotal2">$0.00</h1></div>
+            <br>
             <div class="line"><h1>Tax</h1><h1 id="tax">$0.00</h1></div>
+            <br>
             <div class="total"><h1>Total</h1><h1 id="total">$0.00</h1></div>
         </div>
         
     </body>
-
 </html>
-
