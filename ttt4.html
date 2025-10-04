@@ -159,6 +159,7 @@
                 const [a, b, c] = winconditions[i];
                 if (a !== "-" && a === b && b === c) {
                     winner.textContent = a + " wins!";
+                    turnlabel.textContent = a + " wins!"; 
                     document.getElementById("reset").classList.add("highlight");
                     break;
                 }
@@ -171,6 +172,7 @@
                 }
                 if (emptyspaces === 0) {
                     winner.textContent = "It's a stalemate!";
+                    turnlabel.textContent = "Stalemate!"; 
                     document.getElementById("reset").classList.add("highlight");
                 }   
             }
@@ -209,4 +211,5 @@
         reset.addEventListener("click", userReset);
     </script>
 </body>
+
 </html>
