@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+</head>
+<body>
+    <script>
+        var products = [
+            {
+                "name": "Everton Home Jersey 2024/25",
+                "description": "Official royal blue home shirt featuring the club crest and sponsor logo.",
+                "price": 90,
+                "categories": ["clothing", "jersey", "sports"]
+            },
+            {
+                "name": "Goodison Park Scarf",
+                "description": "Soft knit scarf in blue and white stripes with 'Everton' text and crest tassels.",
+                "price": 28,
+                "categories": ["accessories", "winter", "fan gear"]
+            },
+            {
+                "name": "Everton Baseball Cap",
+                "description": "Adjustable navy cap embroidered with the Everton crest and year founded (1878).",
+                "price": 25,
+                "categories": ["accessories", "headwear", "fan gear"]
+            },
+            {
+                "name": "Everton Water Bottle",
+                "description": "Stainless steel reusable bottle with printed club logo and matte finish.",
+                "price": 22,
+                "categories": ["lifestyle", "eco", "sports"]
+            },
+            {
+                "name": "Everton Retro Hoodie",
+                "description": "Vintage-style hoodie with retro badge and 'Toffees' lettering across the chest.",
+                "price": 65,
+                "categories": ["clothing", "hoodie", "vintage"]
+            }
+        ];
+
+        var jsonString = JSON.stringify(products, null, 2);
+
+        document.write("<pre>" + jsonString + "</pre>");
+    </script>
+</body>
+</html>
