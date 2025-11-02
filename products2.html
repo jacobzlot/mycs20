@@ -9,17 +9,18 @@
     <div id="result"></div>
 
     <script>
-        $.get("./products.json", function(data) {
+    $("#loadBtn").click(function() {
+        $.get("./products.json").done(function(data) {
             let output = "";
             data.forEach(function(item) {
                 output += "<h2>" + item.name + "</h2>";
                 output += "<p>" + item.description + "</p>";
                 output += "<p>Price: $" + item.price + "</p>";
-                output += "<p>Categories: " + item.categories.join(", ") + "</p><hr>";
+                output += "<p>Categories: " + item.categories.join(", ") + "</p>";
             });
             $("#result").html(output);
-        }, "json");
+        })
+    });
     </script>
 </body>
 </html>
-
