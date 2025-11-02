@@ -9,8 +9,7 @@
     <div id="result"></div>
 
     <script>
-    $("#loadBtn").click(function() {
-        $.get("./products.json").done(function(data) {
+        $.get("./products.json", function(data) {
             let output = "";
             data.forEach(function(item) {
                 output += "<h2>" + item.name + "</h2>";
@@ -19,8 +18,8 @@
                 output += "<p>Categories: " + item.categories.join(", ") + "</p><hr>";
             });
             $("#result").html(output);
-        })
-    });
+        }, "json");
     </script>
 </body>
 </html>
+
