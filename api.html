@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API</title>
+    <script>
+    function getDog() {
+        fetch("https://dog.ceo/api/breed/australian/images/random")
+        .then(res => res.json())
+        .then(data => {document.getElementById("result").innerHTML = 
+            `<h1>Random Aussie</h1> <img src="${data.message}" width="400px">`;
+        })
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Dog CEO API</h1>
+    <button onclick="getDog()">Get Random Australian Shepherd Picture</button>
+    <div id="result"></div>
+
+    <p>This API is a massive collection of dog pictures that can be displayed upon request. I selected it because I love dogs and wanted to work with an API that is on the sillier side. </p>
+
+    <p><strong>Source:</strong> <a href="https://dog.ceo/dog-api/" target="_blank">https://dog.ceo/dog-api/</a></p>
+
+    <p><strong>Parameters Used:</strong> This example uses the "breed" parameter in the URL (https://dog.ceo/api/breed/australian/images/random) to request a random image of a specific dog breed (australian). I chose australian because that is my dog's breed.</p>
+
+    <p><strong>Example Use Case:</strong> While this is a silly API, it could definitely still be useful for dog adoption sites or sites that have educational content about dogs.</p>
+</body>
+</html>
