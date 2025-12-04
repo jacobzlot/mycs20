@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Stock Ticker Search</h1>
+    <!-- generate form -->
+    <form action="/process" method="GET">
+        <label>Enter Ticker or Company Name:</label><br>
+        <input type="text" name="search" required><br><br>
+        
+        <label>Search by:</label><br>
+        <!-- Default to Ticker Symbol -->
+        <input type="radio" name="searchType" value="ticker" checked>
+        <label>Ticker Symbol</label><br>
+        <input type="radio" name="searchType" value="company">
+        <label>Company Name</label><br><br>
+        
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
